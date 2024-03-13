@@ -1,80 +1,189 @@
-body{
-    background-color:antiquewhite;
-    border: 5px;
-    border-style: solid;
-    border-color: chocolate;
-    color: blue
+@font-face {
+    font-family: "NotoSans-Medium";
+    src: url("/MeetAndCoffee/assets/fonts/NotoSans-Medium.ttf");
 }
-header{
-    /*propiedades del background*/
-    background-image: url(asset/img/bg-hero.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    /*Propiedades del texto*/
-    font-family: "open sans", "helvetica";
-    text-shadow: 0px 3px 6px, black;
+@font-face {
+    font-family: "NotoSans-Light";
+    src: url("/MeetAndCoffee/assets/fonts/NotoSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "NotoSans-Thin";
+    src: url("/MeetAndCoffee/assets/fonts/NotoSans-Thin.ttf");
+}
+
+:root {
+    --color01: rgb(0, 0, 0);
+    --color02: rgb(255, 255, 255);
+    --color03: rgb(164, 69, 44);
+}
+
+  * {
+    box-sizing:  border-box;
+}
+
+html {
+    font-family: NotoSans-Medium;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color02);
+}
+
+nav > ul {
+    background-color: var(--color01);
+    display: flex;
+    margin: 0;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+    font-family: NotoSans-Light;
+    font-size: 0.8rem;
+}
+
+nav > ul img {
+    height: 1.5rem;
+    padding-left: 2rem;
+}
+
+header {
+    position: relative;
+}
+
+header > img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+header > section {
+    position: absolute;
+    top: 15%;
+    right: 4rem;
+    color: var(--color02);
     text-align: right;
-    color: white;
+    text-shadow: 1px 1px 1px var(--color01);
 }
-/*borde*/
 
-header h1{
-    font-size: 60px;
+header h1, p {
+    margin: 0;
 }
-header h3{
-    font-size: 40px;
-    font-weight: lighter;
+
+header p {
+    font-family: NotoSans-Light;
 }
-.rubik-light{
-    font-family: "Rubik",   ;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style:normal;
+
+.reunion {
+    display: grid;
+    place-items: center;
+    padding: 4rem;
 }
-.caja{
-    border:5px;
-    border-style: solid;
-    border-color: aqua;
+
+.reunion > img {
+    height: 8rem;
 }
-.div1{
-    border:5px;
-    border-style: solid;
-    border-color: blue;
-    display: inline-block;
-    margin: 5px;
-    width: 50%;
-    height: 300px;
+
+.reunion p {
+    font-family: NotoSans-Light;
+    margin: 0;
 }
-.div2{
-    border:5px;
-    border-style: solid;
-    border-color: green;
-    display: inline-block;
-    margin: 5px;
-    width: 50%
+
+article {
+    background-color: var(--color03);
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
-.div3{
-    border:5px;
-    border-style: solid;
-    border-color: yellow;
-    display: block;
-    margin: 5px;
-    height: 50%;
+
+article > img {
+    height: 8rem;
 }
-.div4{
-    border:5px;
-    border-style: solid;
-    border-color: purple;
-    display: block;
-    margin: 5px;
+
+article > section {
+    color: var(--color02);
+    max-width: 22rem;
+    font-family: NotoSans-Thin;
+    font-size: 0.7rem;
+
+    display: grid;
+    gap: 0.5rem;
 }
-footer{
-    text-align:center;
-    background-color: #020202e4;
+
+  article > section > div > * {
+    margin: 0;
 }
-i{
-    color:green;
-    font-size: 30px;
+
+.galeria {
+    text-align: center;
+    padding: 2rem 0 4rem 0;
+}
+
+.galeria > div {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.galeria a {
+    font-family: NotoSans-Light;
+    display: grid;
+    gap: 1rem;
+    color: var(--color01);
+}
+
+.galeria img {
+    height: 5rem;
+    margin: auto;
+}
+
+footer {
+    font-family: NotoSans-Thin;
+    font-size: 0.7rem;
+    text-align: center;
+    color: var(--color02);
+    background-color: var(--color01);
+    padding: 0.5rem;
+}
+
+footer > section {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.icons {
+    height: 1.8rem;
+    margin: 1rem 0;
+}
+
+.post-main {
+    max-width: 43rem;
+    margin: auto;
+    display: grid;
+    gap: 1rem;
+    padding: 2rem 1rem 4rem 1rem;
+}
+
+.post-main img {
+    width: 100%;
+}
+
+.post-main  p {
+    font-family: NotoSans-Light;
+    margin: 0;
+}
+
+#Eventos-Anteriores {
+    text-align: center;
 }
